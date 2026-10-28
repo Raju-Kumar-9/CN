@@ -148,7 +148,7 @@ public:
 void printDAG(Node *n, map<Node *, bool> &printed, int depth = 0) {
     if (!n) return;
     string pad(depth * 4, ' ');
-    if (printed[n] && !n->isLeaf()) {
+    if (printed[n]) {
         cout << pad << n->label << "  (shared -> #" << n->id << ")\n";
         return;
     }
